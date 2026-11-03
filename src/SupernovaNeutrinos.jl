@@ -19,6 +19,7 @@ include("flavors.jl")
 include("flavor_matrix.jl")
 include("mixing.jl")
 include("container.jl")
+include("transformations.jl")
 
 # flavors
 export FlavorScheme, Flavor, TwoFlavor, ThreeFlavor, FourFlavor
@@ -34,5 +35,14 @@ export mass_basis, flavor_basis
 
 # flux containers
 export Container, integrate, integrate_or_sum, can_integrate, can_sum, bin_centers
+
+# flavor transformations
+export FlavorTransformation, SNTransformation, VacuumTransformation, EarthTransformation
+export P_ff, P_mf, P_mm, P_fm, apply
+export NoTransformation, CompleteExchange, TransformationChain
+export AdiabaticMSW, NonAdiabaticMSWH, TwoFlavorDecoherence, ThreeFlavorDecoherence
+export AdiabaticMSWes, NonAdiabaticMSWes, FourFlavorDecoherence
+export NoVacuumTransformation, NeutrinoDecay, QuantumDecoherence
+export NoEarthMatter
 
 end
