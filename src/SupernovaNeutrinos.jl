@@ -23,6 +23,7 @@ include("mixing.jl")
 include("container.jl")
 include("transformations.jl")
 include("models/base.jl")
+include("models/extended.jl")
 
 # flavors
 export FlavorScheme, Flavor, TwoFlavor, ThreeFlavor, FourFlavor
@@ -51,5 +52,6 @@ export NoEarthMatter
 # supernova models
 export SupernovaModel, PinchedModel
 export initial_spectra, transformed_spectra, flux, times, metadata
+export ExtendedModel, extended_time_dependence, is_extended_tail
 
 end

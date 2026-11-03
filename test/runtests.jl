@@ -9,5 +9,6 @@ using LinearAlgebra
     include("container.jl")
     include("transformations.jl")
     include("pinched.jl")
+    include("extended.jl")
     include("aqua.jl")
 end
