@@ -3,5 +3,11 @@ uuid = "aa937d89-9fa3-4b83-8f41-d835ba782bde"
 version = "0.1.0"
 authors = ["Arnav Kapoor <kapoorarnav43@gmail.com>"]
 
+[deps]
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+
 [compat]
+LinearAlgebra = "1"
+Printf = "1"
 julia = "1.11"
