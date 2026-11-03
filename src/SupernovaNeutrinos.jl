@@ -31,10 +31,12 @@ include("models/extended.jl")
 include("models/registry.jl")
 include("models/files.jl")
 include("models/ccsn.jl")
+include("models/fornax.jl")
 
 "All the model types of the SNEWS model repositories."
-all_models() = (Bollig_2016, Bugli_2021, Fischer_2020, Kuroda_2020, Mori_2023, Nakazato_2013, OConnor_2013,
-    OConnor_2015, Sukhbold_2015, Takata_2025, Tamborra_2014, Walk_2018, Walk_2019, Warren_2020, Zha_2021)
+all_models() = (Bollig_2016, Bugli_2021, Fischer_2020, Fornax_2019, Fornax_2021, Fornax_2022, Fornax_2024,
+    Kuroda_2020, Mori_2023, Nakazato_2013, OConnor_2013, OConnor_2015, Sukhbold_2015, Takata_2025, Tamborra_2014,
+    Walk_2018, Walk_2019, Warren_2020, Zha_2021)
 
 # flavors
 export FlavorScheme, Flavor, TwoFlavor, ThreeFlavor, FourFlavor
@@ -73,5 +75,6 @@ export download_models, model_cache, read_table, read_named_table
 export Bollig_2016, Bugli_2021, Fischer_2020, Kuroda_2020, Mori_2023, Nakazato_2013
 export OConnor_2013, OConnor_2015, Sukhbold_2015, Takata_2025, Tamborra_2014
 export Walk_2018, Walk_2019, Warren_2020, Zha_2021, Analytic3Species
+export BinnedSpectraModel, Fornax_2019, Fornax_2021, Fornax_2022, Fornax_2024
 
 end
