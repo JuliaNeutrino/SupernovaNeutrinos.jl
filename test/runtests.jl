@@ -8,5 +8,6 @@ using LinearAlgebra
     include("mixing.jl")
     include("container.jl")
     include("transformations.jl")
+    include("pinched.jl")
     include("aqua.jl")
 end
