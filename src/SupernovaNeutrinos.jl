@@ -9,6 +9,17 @@ of SNEWPY (https://github.com/SNEWS2/snewpy).
 Quantities are plain numbers in fixed units: energies in MeV, times in
 seconds, distances in kpc, areas in cm², luminosities in erg/s, masses in M☉,
 neutrino mixing angles in degrees and mass-squared differences in eV².
+
+```julia
+using SupernovaNeutrinos
+model = Bollig_2016(progenitor_mass = 27)
+E = range(0, 100, length = 201)                          # MeV
+F = flux(model, times(model), E; distance = 10,           # kpc
+         transformation = AdiabaticMSW())
+fluence = integrate(F, :time)
+using SNOwGLoBES                                         # for event rates
+rates = event_rates(SupernovaDetector(:icecube, :water), fluence)
+```
 """
 module SupernovaNeutrinos
 
