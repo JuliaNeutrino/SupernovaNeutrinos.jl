@@ -2,8 +2,9 @@
     SupernovaNeutrinos
 
 Neutrino fluxes from supernova simulations and the flavor transformations they
-undergo between the star and the detector. A Julia port of SNEWPY
-(https://github.com/SNEWS2/snewpy).
+undergo between the star and the detector. Event rates in SNOwGLoBES detectors
+come from SNOwGLoBES.jl, which takes the fluences of this package. A Julia port
+of SNEWPY (https://github.com/SNEWS2/snewpy).
 
 Quantities are plain numbers in fixed units: energies in MeV, times in
 seconds, distances in kpc, areas in cm², luminosities in erg/s, masses in M☉,

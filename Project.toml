@@ -16,10 +16,12 @@ ZipFile = "a5390f91-8eb1-5f08-bee0-b1d1ffed6cea"
 [weakdeps]
 FITSIO = "525bcba6-941b-5504-bd06-fd0dc1a4d2eb"
 HDF5 = "f67ccb44-e63f-5c2f-98bd-6dc0ccc4ba2f"
+SNOwGLoBES = "4930f752-8179-42a4-b4ce-b3ef0a5d9dce"
 
 [extensions]
 SupernovaNeutrinosFITSIOExt = "FITSIO"
 SupernovaNeutrinosHDF5Ext = "HDF5"
+SupernovaNeutrinosSNOwGLoBESExt = "SNOwGLoBES"
 
 [compat]
 CodecZlib = "0.7"
@@ -29,6 +31,7 @@ HDF5 = "0.17"
 LinearAlgebra = "1"
 OrderedCollections = "1, 2"
 Printf = "1"
+SNOwGLoBES = "0.1"
 SpecialFunctions = "2"
 Tar = "1.10"
 ZipFile = "0.10"
