@@ -13,6 +13,8 @@ module SupernovaNeutrinos
 
 using LinearAlgebra
 using Printf
+using OrderedCollections: OrderedDict
+using SpecialFunctions: loggamma
 
 include("constants.jl")
 include("flavors.jl")
@@ -20,6 +22,7 @@ include("flavor_matrix.jl")
 include("mixing.jl")
 include("container.jl")
 include("transformations.jl")
+include("models/base.jl")
 
 # flavors
 export FlavorScheme, Flavor, TwoFlavor, ThreeFlavor, FourFlavor
@@ -44,5 +47,9 @@ export AdiabaticMSW, NonAdiabaticMSWH, TwoFlavorDecoherence, ThreeFlavorDecohere
 export AdiabaticMSWes, NonAdiabaticMSWes, FourFlavorDecoherence
 export NoVacuumTransformation, NeutrinoDecay, QuantumDecoherence
 export NoEarthMatter
+
+# supernova models
+export SupernovaModel, PinchedModel
+export initial_spectra, transformed_spectra, flux, times, metadata
 
 end
