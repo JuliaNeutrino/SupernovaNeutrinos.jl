@@ -1,0 +1,7 @@
+name = "SupernovaNeutrinos"
+uuid = "aa937d89-9fa3-4b83-8f41-d835ba782bde"
+version = "0.1.0"
+authors = ["Arnav Kapoor <kapoorarnav43@gmail.com>"]
+
+[compat]
+julia = "1.11"
