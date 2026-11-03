@@ -1,7 +1,9 @@
 using SupernovaNeutrinos
 using Test
+using LinearAlgebra
 
 @testset "SupernovaNeutrinos" begin
     include("flavors.jl")
+    include("flavor_matrix.jl")
     include("aqua.jl")
 end

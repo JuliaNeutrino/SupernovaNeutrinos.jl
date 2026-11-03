@@ -11,12 +11,17 @@ neutrino mixing angles in degrees and mass-squared differences in eV².
 """
 module SupernovaNeutrinos
 
+using LinearAlgebra
+using Printf
+
 include("constants.jl")
 include("flavors.jl")
+include("flavor_matrix.jl")
 
 # flavors
 export FlavorScheme, Flavor, TwoFlavor, ThreeFlavor, FourFlavor
 export ThreeFlavorMassBasis, ThreeFlavorFlavorBasis, FourFlavorMassBasis, FourFlavorFlavorBasis
 export is_neutrino, is_antineutrino, is_electron, is_muon, is_tauon, is_sterile, lepton, to_tex
+export FlavorMatrix, conversion_matrix, convert_flavor
 
 end
