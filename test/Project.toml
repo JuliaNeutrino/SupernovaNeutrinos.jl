@@ -1,6 +1,8 @@
 [deps]
 Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
+GLoBES = "367f8d2e-8d77-4eed-9bd4-73b32ac618fb"
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+SNOwGLoBES = "4930f752-8179-42a4-b4ce-b3ef0a5d9dce"
 SupernovaNeutrinos = "aa937d89-9fa3-4b83-8f41-d835ba782bde"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
@@ -9,5 +11,8 @@ Aqua = "0.8"
 LinearAlgebra = "1"
 Test = "1"
 
+# not registered yet; [sources] needs Julia 1.11
 [sources]
+GLoBES = {url = "https://github.com/JuliaNeutrino/GLoBES.jl"}
+SNOwGLoBES = {url = "https://github.com/JuliaNeutrino/SNOwGLoBES.jl"}
 SupernovaNeutrinos = {path = ".."}
