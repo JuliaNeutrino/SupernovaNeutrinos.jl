@@ -17,11 +17,18 @@ using Printf
 include("constants.jl")
 include("flavors.jl")
 include("flavor_matrix.jl")
+include("mixing.jl")
 
 # flavors
 export FlavorScheme, Flavor, TwoFlavor, ThreeFlavor, FourFlavor
 export ThreeFlavorMassBasis, ThreeFlavorFlavorBasis, FourFlavorMassBasis, FourFlavorFlavorBasis
 export is_neutrino, is_antineutrino, is_electron, is_muon, is_tauon, is_sterile, lepton, to_tex
 export FlavorMatrix, conversion_matrix, convert_flavor
+
+# mixing
+export MassOrdering, NormalOrdering, InvertedOrdering
+export ThreeFlavorMixingParameters, FourFlavorMixingParameters, MixingParameters
+export mixing_angles, mass_squared_differences, vacuum_mixing_matrix, pmf_high_density_limit
+export mass_basis, flavor_basis
 
 end
