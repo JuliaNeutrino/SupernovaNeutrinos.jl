@@ -11,5 +11,6 @@ using LinearAlgebra
     include("pinched.jl")
     include("extended.jl")
     include("ccsn.jl")
+    include("fornax.jl")
     include("aqua.jl")
 end
