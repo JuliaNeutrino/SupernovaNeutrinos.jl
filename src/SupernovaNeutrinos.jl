@@ -18,6 +18,7 @@ include("constants.jl")
 include("flavors.jl")
 include("flavor_matrix.jl")
 include("mixing.jl")
+include("container.jl")
 
 # flavors
 export FlavorScheme, Flavor, TwoFlavor, ThreeFlavor, FourFlavor
@@ -30,5 +31,8 @@ export MassOrdering, NormalOrdering, InvertedOrdering
 export ThreeFlavorMixingParameters, FourFlavorMixingParameters, MixingParameters
 export mixing_angles, mass_squared_differences, vacuum_mixing_matrix, pmf_high_density_limit
 export mass_basis, flavor_basis
+
+# flux containers
+export Container, integrate, integrate_or_sum, can_integrate, can_sum, bin_centers
 
 end

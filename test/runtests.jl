@@ -6,5 +6,6 @@ using LinearAlgebra
     include("flavors.jl")
     include("flavor_matrix.jl")
     include("mixing.jl")
+    include("container.jl")
     include("aqua.jl")
 end
