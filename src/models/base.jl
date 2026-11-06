@@ -181,8 +181,10 @@ function Base.show(io::IO, ::MIME"text/plain", m::SupernovaModel)
     isempty(file) || print(io, ": ", file)
     t = times(m)
     isempty(t) || @printf(io, "\n  %d time points, %g … %g s", length(t), first(t), last(t))
-    for (k, v) in metadata(m)
-        print(io, "\n  ", rpad(k, 18), _show_value(v))
+    md = metadata(m)
+    width = isempty(md) ? 0 : max(18, maximum(length ∘ string, keys(md)) + 2)   # at least two spaces after the longest label
+    for (k, v) in md
+        print(io, "\n  ", rpad(k, width), _show_value(v))
     end
 end
 _show_value(v) = v isa AbstractFloat ? @sprintf("%g", v) : isnothing(v) ? "none" : string(v)
