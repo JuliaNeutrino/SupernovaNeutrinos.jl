@@ -56,3 +56,17 @@ end
     @test_throws err Nakazato_2013(progenitor_mass = 13, revival_time = 0, metallicity = 0.02, eos = "shen")
     @test SupernovaNeutrinos.validate(Bollig_2016; progenitor_mass = 11.2000001) == (progenitor_mass = 11.2, eos = "LS220")
 end
+
+# A model type of its own, to show metadata without downloading a model
+struct LabelledModel <: SupernovaModel
+    time::Vector{Float64}
+end
+SupernovaNeutrinos.metadata(::LabelledModel) =
+    SupernovaNeutrinos.OrderedDict{String, Any}("EOS" => "SFHo", "Turb. mixing param." => 1.25)
+
+@testset "model display" begin
+    lines = split(sprint(show, MIME("text/plain"), LabelledModel([0.0, 1.0])), '\n')
+    @test lines[1] == "LabelledModel model"
+    @test lines[3] == "  EOS                  SFHo"
+    @test lines[4] == "  Turb. mixing param.  1.25"   # two spaces after the longest label
+end
