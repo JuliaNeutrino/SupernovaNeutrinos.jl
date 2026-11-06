@@ -24,6 +24,8 @@ Julia 1.11 or later. `SNOwGLoBES.Fluence(fluence)` converts a fluence; a
 fluence with several time bins (`integrate(F, :time; limits = ...)`) gives one
 set of rates per bin.
 
+The notebook [`notebooks/01_supernova_neutrinos.ipynb`](notebooks/01_supernova_neutrinos.ipynb) goes through the package: the models, luminosity curves, flavor transformations, event rates in DUNE, Hyper-K and IceCube, the neutronization burst and pre-supernova neutrinos ([open in Colab](https://colab.research.google.com/github/JuliaNeutrino/SupernovaNeutrinos.jl/blob/main/notebooks/01_supernova_neutrinos.ipynb); choose **Runtime → Change runtime type → Julia** first).
+
 ## Units
 
 Quantities are plain `Float64` in fixed units: energies in MeV, times in s,
